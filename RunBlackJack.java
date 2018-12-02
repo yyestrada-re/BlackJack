@@ -18,8 +18,7 @@ public class RunBlackJack {
 		ArrayList<Integer> bot = new ArrayList<Integer>();
 		ArrayList<Integer> roundNum = new ArrayList<Integer>();
 		System.out.println("Welcome to BlackJack!");
-		System.out.println(
-				"\n\t\t\t\t\t\t\t\tInstructions: \n\tBlackjack is played with a 52-card deck. Face cards, such as Queens, Kings, and Jacks are worth 10 points. \n\tSuit cards have their pip value between 2-9. Aces can either be 1 or 11 according to the holder. \n\tThere are 3 ways to win: the dealer busts, or exceeds 21, or you remain within the game's constraints and exceed the dealer's play and vice-versa. Good luck! :) ");
+		System.out.println("\n\t\t\t\t\t\t\t\tInstructions: \n\tBlackjack is played with a 52-card deck. Face cards, such as Queens, Kings, and Jacks are worth 10 points. \n\tSuit cards have their pip value between 2-9. Aces can either be 1 or 11 according to the holder. \n\tThere are 3 ways to win: the dealer busts, or exceeds 21, or you remain within the game's constraints and exceed the dealer's play and vice-versa. Good luck! :) ");
 		System.out.print("\nEnter your name: ");
 		String name = run.nextLine();
 		System.out.print("Your total is currently $1000\n");
@@ -48,10 +47,6 @@ public class RunBlackJack {
 				dealerWins++;
 				money -= bet;
 				System.out.println("You have $" + money + " left.");
-				// System.out.println("You have $" + functions.getRemaining(win, money, bet) + "
-				// remaining"); // boolean,
-				// total,
-				// wager
 				functions.getTallies(userWins, dealerWins, name);
 				// play again?
 				System.out.print("Would you like to play again? Enter Yes or No: ");
@@ -109,8 +104,7 @@ public class RunBlackJack {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			System.out.println(
-					"The Dealer's hidden card was a " + dealerTwo + ". His total is " + functions.getDealerSum(bot));
+			System.out.println("The Dealer's hidden card was a " + dealerTwo + ". His total is " + functions.getDealerSum(bot));
 			String status = functions.getStatus(functions.getUserSum(user), functions.getDealerSum(bot));
 			if (status.equals("won")) {
 				System.out.println("Dealer busted. " + name + " wins!");
